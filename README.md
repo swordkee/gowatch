@@ -43,10 +43,9 @@ watchExts = [".go",".yml"]
 watchPaths = ["/home"]
 # 在执行命令时，需要增加的其他参数
 cmdArgs = ["arg1=val1","arg2=val2"]
-    - arg1=val1
 # 需要增加环境变量，默认已加载当前环境变量
 envs = ["a=b","c=d"]
-# 是否监听 ‘vendor’ 文件夹下的文件改变
+# 是否监听 "vendor" 文件夹下的文件改变
 vendorWatch = false
 # 不需要监听的目录名字
 excludePaths = ["/opt","/home"]
