@@ -1,7 +1,6 @@
 package main
 
 import (
-	"io/ioutil"
 	"os"
 	"path/filepath"
 
@@ -9,6 +8,7 @@ import (
 )
 
 var configFile = "./gowatch.toml"
+
 type config struct {
 	AppName string
 	//指定ouput执行的程序路径
@@ -37,11 +37,8 @@ func parseConfig() *config {
 	if !fileExist(filename) {
 		return c
 	}
-	tomlFile, err := ioutil.ReadFile(filename)
-	if err != nil {
-		panic(err)
-	}
-	_, err = toml.DecodeFile(string(tomlFile), c)
+
+	_, err := toml.DecodeFile(filename, c)
 	if err != nil {
 		panic(err)
 	}
