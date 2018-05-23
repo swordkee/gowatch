@@ -34,7 +34,7 @@ go get github.com/swordkee/gowatch
 # gowatch.toml 配置示例
 
 # 当前目录执行下生成的可执行文件的名字，默认是当前目录名
-appname: "test"
+appname = "test"
 # 指定编译后的目标文件目录
 output = "/bin/demo"
 # 需要追加监听的文件名后缀，默认只有'.go'文件
