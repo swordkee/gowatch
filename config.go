@@ -37,7 +37,6 @@ func parseConfig() *config {
 	if !fileExist(filename) {
 		return c
 	}
-
 	_, err := toml.DecodeFile(filename, c)
 	if err != nil {
 		panic(err)
